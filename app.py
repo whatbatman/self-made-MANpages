@@ -17,14 +17,13 @@ def learn_all_route():
 #we add more records, but for now it *seems* to be working
 @app.route('/learn/<string:task_desc>', methods=['GET'])
 def learn_desc_route(task_desc):
-    print "--"*5, task_desc.replace(" ", "%")
     record = Records.query.filter(Records.description.like("%"+task_desc.replace(" ","%")+"%")).all()
     results = [ r.as_dict() for r in record ]
     return jsonify({'count': len(results), 'results': results})
 
 @app.route('/')
 def index():
-    return "Hello, World!"
+    return "hit /learn, isn't that neat"
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -4,7 +4,7 @@ You know how you always forget what tar flags to use, so you have to look it up 
 
 So I made this. 
 
-Put in whatever you forget, and query it fast over the web.
+Put in whatever you forget, and query it fast over the web with curl or whatever, so you never have to leave your beloved terminal.
 
 i.e,
 
